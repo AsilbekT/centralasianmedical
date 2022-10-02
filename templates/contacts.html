@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %}Markaziy Osiyo tibbiyot universiteti{% endblock %}
+
+{% block link  %}{% endblock %}
+
+{% block content  %}
+<section class="section breadcrumb-modern context-dark parallax-container" data-parallax-img="{% static '' %}images/parallax-03.jpg">
+    <div class="parallax-content section-30 section-sm-70">
+        <div class="shell">
+            <h2 class="veil reveal-sm-block">Contact US</h2>
+            <div class="offset-sm-top-35">
+                <ul class="list-inline list-inline-lg list-inline-dashed p">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section novi-background bg-cover section-70 section-md-114 bg-default">
+    <div class="shell">
+        <div class="range range-65 range-xs-center">
+            <div class="cell-md-8 text-md-left">
+                <h2 class="text-bold">Bog'lanish</h2>
+                <hr class="divider bg-madison hr-md-left-0">
+                <div class="offset-top-30 offset-md-top-30">
+                    <p>Siz uchun qulay bo'lgan har qanday usulda biz bilan bog'lanishingiz mumkin. Biz faks yoki elektron pochta orqali 24/7 ishlaymiz. Shuningdek, quyida joylashgan tezkor aloqa shaklidan foydalanishingiz yoki bizga shaxsan tashrif buyurishingiz mumkin. Savollaringizga javob berishdan xursand bo'lamiz.</p>
+                </div>
+                <div class="offset-top-30">
+                    <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                        <div class="range range-12">
+                            <div class="cell-sm-6">
+                                <div class="form-group"><label class="form-label form-label-outside" for="contact-me-name">Ism</label><input class="form-control form-validation-inside" id="contact-me-name" type="text" name="name" data-constraints="@Required"></div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <div class="form-group"><label class="form-label form-label-outside" for="contact-me-last-name">Familiya</label><input class="form-control form-validation-inside" id="contact-me-last-name" type="text" name="last-name" data-constraints="@Required"></div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <div class="form-group"><label class="form-label form-label-outside" for="contact-me-email">Elektorn manzil</label><input class="form-control form-validation-inside" id="contact-me-email" type="email" name="email" data-constraints="@Required @Email"></div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <div class="form-group"><label class="form-label form-label-outside" for="contact-me-phone">Telefon raqami</label><input class="form-control form-validation-inside" id="contact-me-phone" type="text" name="phone" data-constraints="@Required @IsNumeric"></div>
+                            </div>
+                            <div class="cell-xs-12">
+                                <div class="form-group"><label class="form-label form-label-outside" for="contact-me-message">Habar</label><textarea class="form-control form-validation-inside" id="contact-me-message" name="message" data-constraints="@Required" style="height: 220px"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="text-center text-md-left offset-top-20"><button class="btn btn-primary" type="submit">Habarni jo'natish</button></div>
+                    </form>
+                </div>
+            </div>
+            <div class="cell-xs-10 cell-md-4 text-left">
+                <aside class="aside inset-md-left-30">
+                    <div class="aside-item-2">
+                        <h6 class="text-bold">Telefon</h6>
+                        <div>
+                            <div class="hr bg-gray-light offset-top-10"></div>
+                        </div>
+                        <div class="offset-top-15">
+                            <ul class="list list-unstyled">
+                                <li><span class="icon novi-icon icon-xs text-madison mdi mdi-phone text-middle"></span><a class="text-middle inset-left-10 text-dark" href="tel:1-800-1234-567">1-800-1234-567</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aside-item-2">
+                        <h6 class="text-bold">Elektron pochta</h6>
+                        <div>
+                            <div class="hr bg-gray-light offset-top-10"></div>
+                        </div>
+                        <div class="offset-top-15">
+                            <ul class="list list-unstyled">
+                                <li><span class="icon novi-icon icon-xs text-madison mdi mdi-email-outline text-middle"></span><a class="text-primary text-middle inset-left-10" href="mailto:info@demolink.org">info@demolink.org</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aside-item-2">
+                        <h6 class="text-bold">Manzil</h6>
+                        <div>
+                            <div class="hr bg-gray-light offset-top-10"></div>
+                        </div>
+                        <div class="offset-top-15">
+                            <div class="unit unit-horizontal unit-spacing-xs">
+                                <div class="unit-left"><span class="icon novi-icon icon-xs mdi mdi-map-marker text-madison"></span></div>
+                                <div class="unit-body">
+                                    <p><a class="text-dark" href="#">O'zbekiston. Farg'ona  viloyat, Farg'ona Shaxri</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-item-2">
+                        <h6 class="text-bold">Qabul vaqti</h6>
+                        <div>
+                            <div class="hr bg-gray-light offset-top-10"></div>
+                        </div>
+                        <div class="offset-top-15">
+                            <div class="unit unit-horizontal unit-spacing-xs">
+                                <div class="unit-left"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-madison"></span></div>
+                                <div class="unit-body">
+                                    <div>
+                                        <p>Dushanba-Juma: 8:00 dan - 20:00 gacha</p>
+                                    </div>
+                                    <div>
+                                        <p>Shanba: 8:00 dan - 15:00 gacha</p>
+                                    </div>
+                                    <div>
+                                        <p>Yakshanba: Dam olish kuni</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-item-2">
+                        <h6 class="text-bold">Ijtimoiy tarmoqlarda</h6>
+                        <div class="hr bg-gray-light offset-top-10"></div>
+                        <ul class="list-inline list-inline-xs list-inline-madison">
+                            <li><a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="#"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="#"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-google icon-circle icon-gray-light-filled" href="#"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="#"></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:&quot;-100&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:65},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:&quot;50&quot;},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:&quot;-100&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:&quot;30&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:&quot;40&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffff00&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-97}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-100}]}]" data-key="AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8" data-zoom="16">
+        <div class="google-map"></div>
+        <ul class="google-map-markers">
+            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow" data-icon="{% static '' %}images/gmap_marker.png" data-icon-active="{% static '' %}images/gmap_marker_active.png"></li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}
+{% block link_js  %}{% endblock %}
