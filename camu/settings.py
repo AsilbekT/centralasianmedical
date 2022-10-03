@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-35iax%cfmx-h&m4*k^gzl((_jlv=af29!irv+kz-ry&$5j=*zm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["*", "https://centralasianmedical.com"]
+CSRF_TRUSTED_ORIGINS = ['https://centralasianmedical.com','https://*.127.0.0.1']
 
 # Application definition
 
