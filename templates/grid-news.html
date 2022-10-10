@@ -13,7 +13,7 @@
             <div class="offset-sm-top-35">
                 <ul class="list-inline list-inline-lg list-inline-dashed p">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li>News</li>
+                    <li>Yangiliklar</li>
                 </ul>
             </div>
         </div>
@@ -25,72 +25,19 @@
         <div class="range range-85 range-xs-center">
             <div class="cell-md-8">
                 <div class="range range-30 text-sm-left range-xs-center">
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-01-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html">Liberal Arts Colleges Rankings</a></h6>
-                                <div class="offset-top-20">
-                                    <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
+                    {% for i in news %}
+                        <div class="cell-sm-6">
+                            <article class="post-news"><a href="{% url 'news_details' slug=i.slug %}"><img class="img-responsive" src="/{{i.image}}" width="370" height="240" alt=""></a>
+                                <div class="post-news-body">
+                                    <h6><a href="{% url 'news_details' slug=i.slug %}">{{ i.title }}</a></h6>
+                                    <div class="offset-top-20">
+                                        <p>{{ i.subtitle }}</p>
+                                    </div>
+                                    <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">{{ i.date_created }}</span></div>
                                 </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-02-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html">10 Law Schools Where the Most Accepted Students Enroll</a></h6>
-                                <div class="offset-top-20">
-                                    <p>At these schools, at least 42 percent of accepted students enrolled in fall 2015, U.S. News data show.</p>
-                                </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-04-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html"> Ways Parents and Counselors Can Help Students Earn Scholarships</a></h6>
-                                <div class="offset-top-20">
-                                    <p>Securing scholarships can be stressful, but parents and counselors can serve as a resource.</p>
-                                </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-05-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html"> Consider MBA Programs That Offer Summer Prep</a></h6>
-                                <div class="offset-top-20">
-                                    <p>Summer preparatory programs offered through schools allow students to get a head start on making connections and building skills.</p>
-                                </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-03-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html">5 Ways to Pay for Community College</a></h6>
-                                <div class="offset-top-20">
-                                    <p>Many community colleges offer promise programs, which offer tuition-free awards to eligible students – mainly to students with Pell grant eligibility.</p>
-                                </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="cell-sm-6">
-                        <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-06-370x240.jpg" width="370" height="240" alt=""></a>
-                            <div class="post-news-body">
-                                <h6><a href="news-post-page.html">Studying in the United States</a></h6>
-                                <div class="offset-top-20">
-                                    <p>International students increasingly want to come to the United States for college or graduate school.</p>
-                                </div>
-                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
-                            </div>
-                        </article>
-                    </div>
+                            </article>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="cell-xs-8 cell-md-4 text-left">
