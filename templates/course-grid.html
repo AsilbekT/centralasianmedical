@@ -25,120 +25,30 @@
         <h2 class="text-bold">Our&nbsp;Course</h2>
         <hr class="divider bg-madison">
         <div class="row range-30 isotope offset-top-60 text-left">
+            {% for course in courses %}
             <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-course"><a href="course-details.html"><img class="img-responsive" src="{% static '' %}images/blog/news-01-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Department of Science.</a></h6>
+                <article class="post-course"><a href="{% url 'course_details' slug=course.slug %}">
+                    <div class="post-news__img">
+                    <img class="img-responsive" src="/{{course.image}}" width="370" height="240" alt=""></a>
+                    </div>
+                    <div class="post-news-body post-news__relative">
+                        <h6><a href="{% url 'course_details' slug=course.slug %}">{{ course.title }}</a></h6>
                         <div class="post_meta">
                             <ul>
-                                <li><a href="#">Computer Science</a></li>
                                 <li>
-                                    <p>Duration : 4 Yr</p>
+                                    <p>O‘qish davomiyligi: {{ course.duration }} yil</p>
                                 </li>
+                                <li><a href="#">{{ course.course_type }}</a></li>
                             </ul>
                         </div>
                         <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
+                            <p>{{ course.subtitle }}</p>
                         </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
+                        <div class="post-course-meta offset-top-20 post-news__absolute"><span class="text-middle text-black"> <a class="courses-details__button" href="{% url 'course_details' slug=course.slug %}">Batafsil</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></a></div>
                     </div>
                 </article>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-02-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Banking Courses.</a></h6>
-                        <div class="post_meta">
-                            <ul>
-                                <li><a href="#">Computer Science</a></li>
-                                <li>
-                                    <p>Duration : 4 Yr</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                        </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-03-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Combined with a Handful.</a></h6>
-                        <div class="post_meta">
-                            <ul>
-                                <li><a href="#">Computer Science</a></li>
-                                <li>
-                                    <p>Duration : 4 Yr</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                        </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-04-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Department of Science.</a></h6>
-                        <div class="post_meta">
-                            <ul>
-                                <li><a href="#">Computer Science</a></li>
-                                <li>
-                                    <p>Duration : 4 Yr</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                        </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-05-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Banking Courses.</a></h6>
-                        <div class="post_meta">
-                            <ul>
-                                <li><a href="#">Computer Science</a></li>
-                                <li>
-                                    <p>Duration : 4 Yr</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                        </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
-                <article class="post-news"><a href="news-post-page.html"><img class="img-responsive" src="{% static '' %}images/blog/news-06-370x240.jpg" width="370" height="240" alt=""></a>
-                    <div class="post-news-body">
-                        <h6><a href="course-post-page.html">Combined with a Handful.</a></h6>
-                        <div class="post_meta">
-                            <ul>
-                                <li><a href="#">Computer Science</a></li>
-                                <li>
-                                    <p>Duration : 4 Yr</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offset-top-10">
-                            <p>Liberal Arts Colleges emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.</p>
-                        </div>
-                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black">Read More</span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
-                    </div>
-                </article>
-            </div>
+            {% endfor %}
         </div>
         <div class="offset-top-50"><a class="btn btn-primary" href="grid-news.html">View All Courses</a></div>
     </div>

@@ -24,43 +24,10 @@
             <div class="resp-tabs-container text-sm-left tabs-lg-collapsed" data-group="tabs-lg-collapsed">
                 <div>
                     <div class="inset-lg-right-60">
-                        <h3 class="text-bold veil reveal-lg-block">Undergraduate Study</h3>
-                        <div class="hr divider bg-madison hr-sm-left-0 veil reveal-lg-block"></div>
-                        <div class="offset-lg-top-30">
-                            <p>At James Whitaker, we view college as a time for students to explore, exercise curiosity, and discover new interests and abilities.</p>
-                            <p>We provide students with an immersive, collaborative, and inspiring environment where they can develop a broadly informed, highly disciplined intellect that will help them be successful in whatever work they finally choose.</p>
-                            <p>Our students graduate with the values and knowledge they need to pursue meaningful work, find passion in life-long learning, and lead successful and purposeful lives.</p>
-                        </div>
-                        <div class="offset-top-30"><img class="img-responsive reveal-inline-block" src="{% static '' %}images/academics-01-770x480.jpg" width="770" height="480" alt=""></div>
+                        <div class="offset-top-30 remove-margin">
+                            <img class="img-responsive reveal-inline-block" src="/{{course.image}}" width="770" height="480" alt=""></div>
                         <div class="offset-top-30">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis id ut quasi eius tempore debitis natus voluptas voluptatem ipsa, est fugit veritatis facilis non voluptatibus, inventore sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam illo eius deserunt, fuga cumque, autem, reiciendis fugiat itaque quidem placeat nesciunt omnis explicabo ad? Inventore impedit nobis animi velit nostrum! Temporibus, voluptatibus, sequi.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia, quasi est vitae non deserunt, labore perspiciatis fuga perferendis unde modi, adipisci laboriosam corporis harum qui! Itaque ipsum corporis officia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="inset-lg-right-60">
-                        <h3 class="text-bold veil reveal-lg-block">Graduate &amp; Professional Study</h3>
-                        <div class="hr divider bg-madison hr-sm-left-0 veil reveal-lg-block"></div>
-                        <div class="offset-lg-top-30">
-                            <p>James Whitaker University offers advanced degrees through its Graduate School of Arts &amp; Sciences and 12 professional schools. Browse the organizations below for information on programs of study, academic requirements, and faculty research.</p>
-                        </div>
-                        <div class="offset-top-30"><img class="img-responsive reveal-inline-block" src="{% static '' %}images/academics-02-770x480.jpg" width="770" height="480" alt=""></div>
-                        <div class="offset-top-30">
-                            <p>James Whitaker University offers advanced degrees through its Graduate School of Arts &amp; Sciences and 12 professional schools. Browse the organizations below for information on programs of study, academic requirements, and faculty research.</p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur tenetur nisi animi explicabo quaerat, tempora eos, nostrum ducimus dolore quisquam consequuntur dicta debitis deleniti, iusto tempore excepturi aspernatur at totam! <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aliquid reiciendis non, reprehenderit provident nostrum corrupti nam labore repellendus! Quod quaerat vero assumenda, laboriosam ipsam, at? Praesentium, blanditiis sit unde!</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="inset-lg-right-60">
-                        <h3 class="text-bold veil reveal-lg-block">Departments &amp; Programs</h3>
-                        <div class="hr divider bg-madison hr-sm-left-0 veil reveal-lg-block"></div>
-                        <div class="offset-lg-top-30">
-                            <p>The following is a list of our degree-granting academic departments and programs.</p>
-                        </div>
-                        <div class="offset-top-30"><img class="img-responsive reveal-inline-block" src="{% static '' %}images/academics-03-770x480.jpg" width="770" height="480" alt=""></div>
-                        <div class="offset-top-30">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt pariatur, harum quidem, quam asperiores autem odio. Aut inventore quaerat ea similique. Voluptate modi quibusdam neque sapiente deleniti quidem distinctio numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus quod dolore, accusantium in nulla. Quaerat amet nesciunt in aperiam eaque blanditiis non! Suscipit, minus asperiores. Adipisci quod cupiditate nobis!</p>
+                            <p>{{ course.body|safe }}</p>
                         </div>
                     </div>
                 </div>
